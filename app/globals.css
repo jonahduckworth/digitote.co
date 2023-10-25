@@ -24,4 +24,29 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    font-family: 'Visby CF Regular', sans-serif;
+}
+
+@font-face {
+  font-family: 'Avenir Black';
+  src: url('/fonts/avenir-black.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Avenir Heavy';
+  src: url('/fonts/avenir-heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Visby CF Regular';
+  src: url('/fonts/visby-cf-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
 }
