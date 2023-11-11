@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Carousel from "@/components/Carousel";
+import Features from "@/components/Features";
 import "./styles.css";
 
 const LandingPage: React.FC = () => {
@@ -12,6 +13,7 @@ const LandingPage: React.FC = () => {
       <Hero />
       <Carousel />
       <div className="h-32 bg-white"></div>
+      <Features />
 
       {/* Mission and Vision */}
       <section className="container mx-auto mb-12">
