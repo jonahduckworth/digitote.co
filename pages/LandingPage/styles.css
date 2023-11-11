@@ -12,3 +12,16 @@
   animation: fadeIn 1s ease-out 1;
   animation-fill-mode: forwards;
 }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 12s linear infinite;
+}
