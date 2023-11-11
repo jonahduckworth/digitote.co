@@ -1,21 +1,14 @@
 import React from "react";
 
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
 import "./styles.css";
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col p-4 bg-gray-100 font-visby">
-      {/* Header */}
-      <header className="w-full h-screen flex items-center justify-center opacity-0 animate-fadeIn mb-12">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-black mb-6 text-primary-blue">
-            Welcome to Digitote
-          </h1>
-          <h2 className="text-3xl font-semibold mb-4 text-primary-pink">
-            Empowering the influencer industry.
-          </h2>
-        </div>
-      </header>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <Navbar />
+      <Hero />
 
       {/* Mission and Vision */}
       <section className="container mx-auto mb-12">
