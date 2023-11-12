@@ -1,7 +1,17 @@
 // Navbar.tsx
-import React from "react";
+
+"use client";
+
+import React, { useState } from "react";
+
+import BookDemoModal from "./BookDemoModal";
 
 const Navbar: React.FC = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   return (
     <nav className="absolute top-0 left-0 w-full bg-transparent z-10">
       <div className="container mx-auto py-6 flex items-center justify-between">
@@ -41,10 +51,14 @@ const Navbar: React.FC = () => {
 
         {/* Right Section - Book a Demo button */}
         <div className="flex-1 flex justify-end">
-          <button className="bg-primary-cyan hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium">
+          <button
+            onClick={openModal}
+            className="bg-primary-cyan hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium"
+          >
             Book a Demo
           </button>
         </div>
+        {isModalOpen && <BookDemoModal onClose={closeModal} />}
       </div>
     </nav>
   );
