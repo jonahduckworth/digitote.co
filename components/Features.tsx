@@ -105,13 +105,13 @@ const Features: React.FC = () => {
           {featureData.map((feature, index) => (
             <motion.div
               key={index}
-              className="text-start border-primary-pink-75 bg-white border-4 p-4 rounded-lg"
+              className="text-start border-primary-cyan bg-primary-cyan-50 border-4 p-4 rounded-lg"
               variants={itemVariants}
             >
               <h3 className="text-xl font-bold mb-2 text-primary-blue h-14">
                 {feature.title}
               </h3>
-              <hr className="border-t-2 mb-2"></hr>
+              <hr className="border-primary-pink mb-2"></hr>
               <p className="text-black">{feature.description}</p>
             </motion.div>
           ))}

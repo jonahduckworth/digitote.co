@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Carousel from "@/components/Carousel";
 import Features from "@/components/Features";
+import Testimonials from "@/components/Testimonials";
 import "./styles.css";
 
 const LandingPage: React.FC = () => {
@@ -13,6 +14,7 @@ const LandingPage: React.FC = () => {
       <Hero />
       <Carousel />
       <Features />
+      <Testimonials />
 
       {/* Footer */}
       <footer className="w-full mt-auto p-6 bg-primary-blue text-white text-center shadow-inner">
