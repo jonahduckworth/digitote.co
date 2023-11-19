@@ -3,6 +3,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const Features: React.FC = () => {
   const featureData = [
@@ -50,22 +51,43 @@ const Features: React.FC = () => {
     },
   ];
 
+  // Animation variants for each feature
+  const itemVariants = {
+    offscreen: {
+      y: 50,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
+
   return (
-    <div className="bg-white">
+    <div className="bg-primary-blue">
       <div className="container mx-auto py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {featureData.map((feature, index) => (
-            <div key={index} className="text-start">
-              <img
-                src={feature.icon}
-                alt={feature.title}
-                className="mb-4 h-20 w-20"
-              />
-              <h3 className="text-xl font-bold mb-2 text-primary-blue">
+            <motion.div
+              key={index}
+              className="text-start border-primary-pink bg-white border-4 p-4 rounded-lg"
+              variants={itemVariants}
+              initial="offscreen"
+              whileInView="onscreen"
+              exit="offscreen"
+              viewport={{ once: false, amount: 0.65 }}
+            >
+              <h3 className="text-xl font-bold mb-2 text-primary-blue h-14">
                 {feature.title}
               </h3>
+              <hr className="border-t-2 mb-2"></hr>
               <p className="text-black">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

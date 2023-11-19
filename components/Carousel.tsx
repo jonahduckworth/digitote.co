@@ -46,27 +46,30 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden relative">
-      <motion.div
-        className="flex"
-        variants={variants}
-        initial="start"
-        animate="animate"
-      >
-        {allImages.map((image, index) => (
-          <div
-            key={index}
-            className="w-80 h-80 mx-4 flex-shrink-0 relative group"
-          >
-            <img
-              src={image}
-              alt={`Slide ${index}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
-      </motion.div>
-    </div>
+    <>
+      <div className="w-full overflow-hidden relative">
+        <motion.div
+          className="flex"
+          variants={variants}
+          initial="start"
+          animate="animate"
+        >
+          {allImages.map((image, index) => (
+            <div
+              key={index}
+              className="w-80 h-80 mx-4 flex-shrink-0 relative group border-white border-4 rounded-lg"
+            >
+              <img
+                src={image}
+                alt={`Slide ${index}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+      <div className="h-20 bg-primary-blue"></div>
+    </>
   );
 };
 
