@@ -22,16 +22,14 @@ const Hero: React.FC = () => {
         style={{ transform: `translateY(${offset * 0.3}px)` }}
       >
         <h1 className="text-3xl md:text-5xl font-black mb-2 text-white px-4 text-center">
-          In a World Where You Can Be Anything Be
+          Where <span className="text-primary-cyan">Talent Management</span>{" "}
+          Meets <span className="text-primary-cyan">Technology</span>
         </h1>
       </div>
       <div
-        className="flex-1 flex-col bg-primary-pink flex items-center justify-center px-4 md:px-52 text-center"
+        className="flex-1 flex-col bg-primary-pink flex items-center justify-center px-4 md:px-44 text-start"
         style={{ transform: `translateY(-${offset * 0.3}px)` }}
       >
-        <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-8">
-          Where Talent Management Meets Technology
-        </h3>
         <p className="text-lg md:text-xl text-white mb-4 md:mb-8">
           Welcome to your Digital Tote-bag! A catch all for campaign data,
           communication, calendars, payments, and so much more. Born from
@@ -43,7 +41,7 @@ const Hero: React.FC = () => {
         </p>
         <p className="text-lg md:text-xl text-white">
           Next time your talent is looking for campaign details, tell them,
-          “it’s in your tote!”
+          <span className="text-primary-cyan"> it’s in your tote!</span>
         </p>
       </div>
     </header>

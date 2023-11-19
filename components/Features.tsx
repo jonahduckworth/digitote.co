@@ -49,21 +49,44 @@ const Features: React.FC = () => {
       description:
         "Fundamental to Digitote's ethos is a commitment to transparency. We provide a detailed fee analysis for every project, ensuring talent, talent managers and agencies have a clear understanding of their earnings. This feature displays a comprehensive breakdown of agency fees alongside talent remuneration, fostering trust and clarity in financial dealings.",
     },
+    {
+      icon: "icons/money.png", // Relevant for financial breakdowns
+      title: "More to come!",
+      description: "",
+    },
   ];
+
+  // Parent container animation variants
+  const containerVariants = {
+    visible: {
+      transition: {
+        staggerChildren: 0.2, // Stagger the animation of children
+      },
+    },
+    hidden: {
+      transition: {
+        staggerChildren: 0.1, // Stagger the exit animation of children
+        staggerDirection: -1, // Reverse the stagger direction on exit
+      },
+    },
+  };
 
   // Animation variants for each feature
   const itemVariants = {
-    offscreen: {
-      y: 50,
-      opacity: 0,
-    },
-    onscreen: {
+    visible: {
       y: 0,
       opacity: 1,
       transition: {
         type: "spring",
         bounce: 0.4,
-        duration: 0.8,
+        duration: 0.9,
+      },
+    },
+    hidden: {
+      y: 90,
+      opacity: 0,
+      transition: {
+        duration: 0.5,
       },
     },
   };
@@ -71,16 +94,19 @@ const Features: React.FC = () => {
   return (
     <div className="bg-primary-blue">
       <div className="container mx-auto py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          exit="hidden"
+          viewport={{ once: false }}
+        >
           {featureData.map((feature, index) => (
             <motion.div
               key={index}
-              className="text-start border-primary-pink bg-white border-4 p-4 rounded-lg"
+              className="text-start border-primary-pink-75 bg-white border-4 p-4 rounded-lg"
               variants={itemVariants}
-              initial="offscreen"
-              whileInView="onscreen"
-              exit="offscreen"
-              viewport={{ once: false, amount: 0.65 }}
             >
               <h3 className="text-xl font-bold mb-2 text-primary-blue h-14">
                 {feature.title}
@@ -89,7 +115,7 @@ const Features: React.FC = () => {
               <p className="text-black">{feature.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
