@@ -21,27 +21,27 @@ const Hero: React.FC = () => {
         className="flex-1 bg-primary-blue flex items-center justify-center"
         style={{ transform: `translateY(${offset * 0.3}px)` }}
       >
-        <h1 className="text-5xl font-black mb-2 text-white">
+        <h1 className="text-3xl md:text-5xl font-black mb-2 text-white px-4 text-center">
           In a World Where You Can Be Anything Be
         </h1>
       </div>
       <div
-        className="flex-1 flex-col bg-primary-pink flex items-start justify-center  px-52"
+        className="flex-1 flex-col bg-primary-pink flex items-center justify-center px-4 md:px-52 text-center"
         style={{ transform: `translateY(-${offset * 0.3}px)` }}
       >
-        <h3 className="text-2xl font-bold mb-8 font-avenir-heavy">
+        <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-8">
           Where Talent Management Meets Technology
         </h3>
-        <p className="text-xl text-white mb-8">
+        <p className="text-lg md:text-xl text-white mb-4 md:mb-8">
           Welcome to your Digital Tote-bag! A catch all for campaign data,
           communication, calendars, payments, and so much more. Born from
           real-life challenges as a talent manager and a relentless pursuit of
           transparency, Digitote is your ultimate partner in streamlining brand
           collaborations. We intimately understand the nuances of this job, so
-          we created a platform that supports and systemizers life between
+          we created a platform that supports and systematizes life between
           talent and manager. We go as far as to say, it’s life changing.
         </p>
-        <p className="text-xl text-white">
+        <p className="text-lg md:text-xl text-white">
           Next time your talent is looking for campaign details, tell them,
           “it’s in your tote!”
         </p>
