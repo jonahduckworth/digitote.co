@@ -84,7 +84,7 @@ const Testimonials: React.FC = () => {
             whileInView="onscreen"
             viewport={{ once: false }}
           >
-            Krysten Snell
+            Kristyn Snell
           </motion.p>
           <motion.p
             className="text-sm"
@@ -97,7 +97,7 @@ const Testimonials: React.FC = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          className="flex flex-col flex-grow mx-12 bg-white p-4 rounded-md"
+          className="flex flex-col flex-grow mx-12 bg-white p-4 mb-4 rounded-md"
           variants={testimonialVariants}
           initial="offscreen"
           whileInView="onscreen"

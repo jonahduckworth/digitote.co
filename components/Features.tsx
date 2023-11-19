@@ -2,7 +2,7 @@
 
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Features: React.FC = () => {
@@ -58,49 +58,69 @@ const Features: React.FC = () => {
 
   // Parent container animation variants
   const containerVariants = {
-    visible: {
-      transition: {
-        staggerChildren: 0.2, // Stagger the animation of children
-      },
-    },
     hidden: {
       transition: {
-        staggerChildren: 0.1, // Stagger the exit animation of children
-        staggerDirection: -1, // Reverse the stagger direction on exit
+        staggerChildren: 0.1,
+        staggerDirection: -1,
+      },
+    },
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+        staggerDirection: 1,
       },
     },
   };
 
-  // Animation variants for each feature
+  // Animation variants for each feature item
   const itemVariants = {
-    visible: {
-      y: 0,
-      opacity: 1,
+    hidden: {
+      x: -50,
+      opacity: 0,
       transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 0.9,
+        duration: 0.5,
       },
     },
-    hidden: {
-      y: 90,
-      opacity: 0,
+    visible: {
+      x: 0,
+      opacity: 1,
       transition: {
         duration: 0.5,
       },
     },
   };
 
+  // Custom hook to track the position of the window
+  const useScrollPosition = () => {
+    const [scrollPosition, setScrollPosition] = useState(0);
+    useEffect(() => {
+      const updatePosition = () => {
+        setScrollPosition(window.pageYOffset);
+      };
+      window.addEventListener("scroll", updatePosition);
+      updatePosition();
+      return () => window.removeEventListener("scroll", updatePosition);
+    }, []);
+    return scrollPosition;
+  };
+
+  // Tracking scroll position using the custom hook
+  const scrollY = useScrollPosition();
+
+  // Define a threshold for when the elements should fade out
+  const threshold = window.innerHeight / 1.5;
+
   return (
-    <div className="bg-primary-blue">
+    <div className="bg-primary-blue mb-20">
       <div className="container mx-auto py-12">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          exit="hidden"
-          viewport={{ once: false }}
+          // Only trigger the visible animation if we've scrolled down past the threshold
+          animate={scrollY > threshold ? "visible" : "hidden"}
+          // Trigger the hidden animation only if we scroll up past the threshold
+          exit={scrollY < threshold ? "hidden" : "visible"}
         >
           {featureData.map((feature, index) => (
             <motion.div
