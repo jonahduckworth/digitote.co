@@ -14,8 +14,10 @@ const LandingPage: React.FC = () => {
       <Navbar />
       <Hero />
       <Carousel />
-      <Features />
-      <div className="sm:flex-1 lg:flex flex-row">
+      <div className="mx-4">
+        <Features />
+      </div>
+      <div className="sm:flex-1 lg:flex flex-row mx-4">
         <Testimonials />
         <Pricing />
       </div>

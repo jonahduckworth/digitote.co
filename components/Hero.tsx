@@ -5,7 +5,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const wordList = ["Transparently", "Organization", "Technology", "Efficiency"];
+const wordList = ["Transparency", "Organization", "Technology", "Efficiency"];
 
 const Hero: React.FC = () => {
   const [offset, setOffset] = useState(0);
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
   };
 
   // Calculate the width needed for the largest word
-  const maxWidth = Math.max(...wordList.map((word) => word.length)) * 20; // 20 is an approximate width per character
+  const maxWidth = Math.max(...wordList.map((word) => word.length)) * 15; // 15 is an approximate width per character
 
   const handleScroll = () => setOffset(window.pageYOffset);
 
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
               <AnimatePresence mode="wait">
                 <motion.span
                   key={wordList[currentWord]}
-                  className="text-primary-cyan block"
+                  className="text-primary-pink-75 block"
                   variants={wordVariants}
                   initial="initial"
                   animate="animate"

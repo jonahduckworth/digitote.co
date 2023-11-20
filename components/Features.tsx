@@ -112,7 +112,7 @@ const Features: React.FC = () => {
 
   return (
     <div className="bg-primary-blue mb-20">
-      <div className="container mx-auto py-12">
+      <div className="container mx-auto">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
