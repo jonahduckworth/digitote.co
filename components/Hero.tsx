@@ -42,8 +42,8 @@ const Hero: React.FC = () => {
         className="flex-1 bg-primary-blue flex items-center justify-center"
         style={{ transform: `translateY(${offset * 0.3}px)` }}
       >
-        <h1 className="text-3xl md:text-5xl font-black text-white px-4 text-center">
-          <div className="flex flex-wrap justify-center items-baseline">
+        <h1 className="text-5xl font-black text-white px-4 text-center">
+          <div className="flex flex-wrap justify-center font-avenir-heavy items-baseline">
             <p className="mr-2">
               Where <span className="text-primary-cyan">Talent Management</span>{" "}
               Meets{" "}

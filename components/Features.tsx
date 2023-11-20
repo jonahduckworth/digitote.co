@@ -52,7 +52,16 @@ const Features: React.FC = () => {
     {
       icon: "icons/money.png", // Relevant for financial breakdowns
       title: "More to come!",
-      description: "",
+      description: (
+        <p>
+          - Calendar Integration
+          <br />
+          - Robust Talent Profiles
+          <br />
+          - Automated Invoicing
+          <br />- And so much more!
+        </p>
+      ),
     },
   ];
 

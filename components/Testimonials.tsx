@@ -52,7 +52,7 @@ const Testimonials: React.FC = () => {
   return (
     <div className="container mx-auto lg:w-2/3">
       <motion.div
-        className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg pl-6 mx-4"
+        className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg px-8 pt-8 mx-4"
         variants={pinkBoxVariants}
         initial="offscreen"
         whileInView="onscreen"
