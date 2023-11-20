@@ -14,10 +14,10 @@ const LandingPage: React.FC = () => {
       <Navbar />
       <Hero />
       <Carousel />
-      <div className="mx-4">
-        <Features />
-      </div>
-      <div className="sm:flex-1 lg:flex flex-row mx-4">
+      <Features />
+
+      {/* White background for Testimonials */}
+      <div className="sm:flex-1 lg:flex flex-row bg-white pt-12">
         <Testimonials />
         <Pricing />
       </div>

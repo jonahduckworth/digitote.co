@@ -80,7 +80,10 @@ const Hero: React.FC = () => {
         </p>
         <p className="text-lg md:text-xl text-white">
           Next time your talent is looking for campaign details, tell them,
-          <span className="text-primary-cyan"> it’s in your tote!</span>
+          <span className="text-primary-blue font-avenir-heavy">
+            {" "}
+            it’s in your tote!
+          </span>
         </p>
       </div>
     </header>

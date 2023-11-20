@@ -111,10 +111,10 @@ const Features: React.FC = () => {
   const threshold = window.innerHeight / 1.5;
 
   return (
-    <div className="bg-primary-blue mb-20">
+    <div className="bg-white">
       <div className="container mx-auto">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-4"
           variants={containerVariants}
           initial="hidden"
           // Only trigger the visible animation if we've scrolled down past the threshold
@@ -125,7 +125,7 @@ const Features: React.FC = () => {
           {featureData.map((feature, index) => (
             <motion.div
               key={index}
-              className="text-start border-primary-cyan bg-primary-cyan-50 border-4 p-4 rounded-lg"
+              className="text-start border-primary-blue bg-primary-cyan-50 border-4 p-4 rounded-lg"
               variants={itemVariants}
             >
               <h3 className="text-xl font-bold mb-2 text-primary-blue h-14">
