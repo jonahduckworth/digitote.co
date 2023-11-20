@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import BookDemoModal from "./BookDemoModal";
+import Pricing from "./Pricing";
 
 const testimonials = [
   {
@@ -43,14 +44,6 @@ const Testimonials: React.FC = () => {
     offscreen: { opacity: 0, y: 50 },
     onscreen: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
-  const imageVariants = {
-    offscreen: { opacity: 0, x: -50 },
-    onscreen: { opacity: 1, x: 0, transition: { duration: 1 } },
-  };
-  const textVariants = {
-    offscreen: { opacity: 0 },
-    onscreen: { opacity: 1, transition: { duration: 1 } },
-  };
   const testimonialVariants = {
     offscreen: { opacity: 0, x: 50 },
     onscreen: { opacity: 1, x: 0, transition: { duration: 1 } },
@@ -59,45 +52,14 @@ const Testimonials: React.FC = () => {
   return (
     <div className="container mx-auto lg:w-2/3">
       <motion.div
-        className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg mx-4"
+        className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg pl-6 mx-4"
         variants={pinkBoxVariants}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: false }}
       >
         <motion.div
-          className="flex-none w-80 h-120 p-4 mb-4 lg:mb-0"
-          variants={imageVariants}
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: false }}
-        >
-          <img
-            src={"headshot.png"}
-            alt={`headshot of digitote`}
-            className="object-cover rounded-md"
-          />
-          <motion.p
-            className="text-md font-semibold"
-            variants={textVariants}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: false }}
-          >
-            Kristyn Snell
-          </motion.p>
-          <motion.p
-            className="text-sm"
-            variants={textVariants}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: false }}
-          >
-            Founder, CEO
-          </motion.p>
-        </motion.div>
-        <motion.div
-          className="flex flex-col flex-grow mx-12 bg-white p-4 mb-4 rounded-md"
+          className="flex flex-col flex-grow bg-white p-4 rounded-md"
           variants={testimonialVariants}
           initial="offscreen"
           whileInView="onscreen"
@@ -110,7 +72,7 @@ const Testimonials: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1 }}
-              className="text-black flex-grow"
+              className="text-black"
             >
               <p className="text-lg mb-4">{testimonials[current].content}</p>
               <p className="text-md font-semibold text-primary-blue">
@@ -128,6 +90,9 @@ const Testimonials: React.FC = () => {
             </button>
           </div>
         </motion.div>
+        <div className="w-full">
+          <Pricing />
+        </div>
       </motion.div>
       {isModalOpen && <BookDemoModal onClose={closeModal} />}
     </div>
