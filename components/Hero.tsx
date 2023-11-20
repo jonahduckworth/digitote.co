@@ -3,9 +3,30 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const wordList = ["Transparently", "Organization", "Technology", "Efficiency"];
 
 const Hero: React.FC = () => {
   const [offset, setOffset] = useState(0);
+  const [currentWord, setCurrentWord] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWord((prevWord) => (prevWord + 1) % wordList.length);
+    }, 3000); // Change word every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const wordVariants = {
+    initial: { y: -20, opacity: 0.1 },
+    animate: { y: 0, opacity: 1, transition: { duration: 0.8 } },
+    exit: { y: 20, opacity: 0, transition: { duration: 0.5 } },
+  };
+
+  // Calculate the width needed for the largest word
+  const maxWidth = Math.max(...wordList.map((word) => word.length)) * 20; // 20 is an approximate width per character
 
   const handleScroll = () => setOffset(window.pageYOffset);
 
@@ -22,8 +43,26 @@ const Hero: React.FC = () => {
         style={{ transform: `translateY(${offset * 0.3}px)` }}
       >
         <h1 className="text-3xl md:text-5xl font-black text-white px-4 text-center">
-          Where <span className="text-primary-cyan">Talent Management</span>{" "}
-          Meets <span className="text-primary-cyan">Technology</span>
+          <div className="flex flex-wrap justify-center items-baseline">
+            <p className="mr-2">
+              Where <span className="text-primary-cyan">Talent Management</span>{" "}
+              Meets{" "}
+            </p>
+            <div style={{ width: maxWidth, height: "1em" }}>
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={wordList[currentWord]}
+                  className="text-primary-cyan block"
+                  variants={wordVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  {wordList[currentWord]}
+                </motion.span>
+              </AnimatePresence>
+            </div>
+          </div>
         </h1>
       </div>
       <div
