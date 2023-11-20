@@ -11,7 +11,6 @@ const Navbar: React.FC = () => {
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
-  const closeNav = () => setNavOpen(false);
   const toggleNav = () => setNavOpen(!isNavOpen);
 
   const navVariants = {
@@ -112,7 +111,7 @@ const Navbar: React.FC = () => {
           <div className="flex justify-end">
             <button
               onClick={openModal}
-              className="bg-primary-cyan w-32 hover:bg-primary-cyan-75 text-white px-4 py-2 mt-8 rounded-full text-sm font-medium z-20"
+              className="bg-primary-cyan w-32 hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium z-20"
             >
               Book a Demo!
             </button>
