@@ -1,22 +1,34 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import BookDemoModal from "./BookDemoModal";
 
 const Navbar: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [isNavOpen, setNavOpen] = useState(false);
+  const [isNavOpen, setNavOpen] = useState(window.innerWidth >= 768);
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
+  const closeNav = () => setNavOpen(false);
   const toggleNav = () => setNavOpen(!isNavOpen);
 
   const navVariants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: "-100%" },
   };
+
+  // Listen for window resize and update isNavOpen accordingly
+  useEffect(() => {
+    const handleResize = () => {
+      setNavOpen(window.innerWidth >= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <nav className="absolute top-0 left-0 w-full bg-transparent z-10">
@@ -44,7 +56,7 @@ const Navbar: React.FC = () => {
 
         {/* Center-aligned links for Desktop and Mobile */}
         <AnimatePresence>
-          {(isNavOpen || window.innerWidth >= 768) && (
+          {isNavOpen && (
             <>
               <div className="md:hidden fixed top-0 left-0 mt-6 ml-6">
                 <button onClick={toggleNav} className="text-white text-3xl">
@@ -96,11 +108,11 @@ const Navbar: React.FC = () => {
 
         {/* Right Section - Book a Demo button */}
         <div className="md:flex-grow"></div>
-        {(isNavOpen || window.innerWidth >= 768) && (
+        {isNavOpen && (
           <div className="flex justify-end">
             <button
               onClick={openModal}
-              className="bg-primary-cyan w-32 hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium"
+              className="bg-primary-cyan w-32 hover:bg-primary-cyan-75 text-white px-4 py-2 mt-8 rounded-full text-sm font-medium z-20"
             >
               Book a Demo!
             </button>
