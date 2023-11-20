@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Carousel from "@/components/Carousel";
 import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
 import "./styles.css";
 
 const LandingPage: React.FC = () => {
@@ -20,10 +21,7 @@ const LandingPage: React.FC = () => {
         <Testimonials />
       </div>
 
-      {/* Footer */}
-      <footer className="w-full mt-auto p-6 bg-primary-blue text-white text-center shadow-inner">
-        <p>&copy; {new Date().getFullYear()} Digitote. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
