@@ -86,7 +86,7 @@ const Testimonials: React.FC = () => {
             <button
               onClick={openModal}
               type="button"
-              className="bg-primary-cyan hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium"
+              className="bg-primary-cyan hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium font-avenir-heavy"
             >
               Book a Demo!
             </button>

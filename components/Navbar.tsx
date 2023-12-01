@@ -7,7 +7,7 @@ import BookDemoModal from "./BookDemoModal";
 
 const Navbar: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [isNavOpen, setNavOpen] = useState(window.innerWidth >= 768);
+  const [isNavOpen, setNavOpen] = useState(false);
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
@@ -20,10 +20,18 @@ const Navbar: React.FC = () => {
 
   // Listen for window resize and update isNavOpen accordingly
   useEffect(() => {
+    // Define the function inside the effect to avoid referencing window outside
     const handleResize = () => {
       setNavOpen(window.innerWidth >= 768);
     };
+
+    // Set the initial state based on the current window width
+    handleResize();
+
+    // Add the event listener for future window resize events
     window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -111,7 +119,7 @@ const Navbar: React.FC = () => {
           <div className="flex justify-end">
             <button
               onClick={openModal}
-              className="bg-primary-cyan w-32 hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium z-20"
+              className="bg-primary-cyan w-32 hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium z-20 font-avenir-heavy"
             >
               Book a Demo!
             </button>
