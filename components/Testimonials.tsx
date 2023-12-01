@@ -10,7 +10,7 @@ const testimonials = [
   {
     id: 1,
     content:
-      "I can’t imagine working without it, to be honest, it makes me very anxious to even think about it!!! It’s the best!",
+      "I can't imagine working without it, to be honest, it makes me very anxious to even think about it!!! It's the best!",
     author: "Maya Vorderstrasse",
     handle: "@mayavorderstrasse",
   },
@@ -34,10 +34,9 @@ const Testimonials: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Change testimonial every 5 seconds
-
+    }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonials.length]);
 
   // Animation variants
   const pinkBoxVariants = {
@@ -50,7 +49,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto lg:w-2/3">
+    <div className="container mx-auto lg:w-1/2">
       <motion.div
         className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg px-8 pt-8 mx-4"
         variants={pinkBoxVariants}
@@ -74,7 +73,9 @@ const Testimonials: React.FC = () => {
               transition={{ duration: 1 }}
               className="text-black"
             >
-              <p className="text-lg mb-4">{testimonials[current].content}</p>
+              <p className="text-lg mb-4 font-avenir-heavy">
+                {testimonials[current].content}
+              </p>
               <p className="text-md font-semibold text-primary-blue">
                 {testimonials[current].author}
               </p>
@@ -84,13 +85,14 @@ const Testimonials: React.FC = () => {
           <div className="flex justify-end mt-4">
             <button
               onClick={openModal}
+              type="button"
               className="bg-primary-cyan hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium"
             >
               Book a Demo!
             </button>
           </div>
         </motion.div>
-        <div className="w-full">
+        <div className="w-full ml-4">
           <Pricing />
         </div>
       </motion.div>
