@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
           Next time your talent is looking for campaign details, tell them,
           <span className="text-primary-blue font-avenir-heavy">
             {" "}
-            it's in your tote!
+            it&apos;s in your tote!
           </span>
         </p>
       </div>

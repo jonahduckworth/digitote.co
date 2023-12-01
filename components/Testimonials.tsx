@@ -36,7 +36,7 @@ const Testimonials: React.FC = () => {
       setCurrent((prev) => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, []);
 
   // Animation variants
   const pinkBoxVariants = {

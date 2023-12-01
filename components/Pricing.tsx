@@ -8,7 +8,7 @@ const Pricing: React.FC = () => {
         <span className="text-gray-600">$129 CAD Annually</span>
       </h2>
       <p className="font-semibold text-lg text-gray-800 mb-4">
-        What's included:
+        What&apos;s included:
       </p>
       <ul className="list-none text-gray-700">
         <li className="flex items-center mb-2">
