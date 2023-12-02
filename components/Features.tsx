@@ -102,14 +102,16 @@ const Features: React.FC = () => {
   // Custom hook to track the position of the window
   const useScrollPosition = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
+
     useEffect(() => {
       const updatePosition = () => {
-        setScrollPosition(window.pageYOffset);
+        setScrollPosition(window.scrollY);
       };
       window.addEventListener("scroll", updatePosition);
       updatePosition();
       return () => window.removeEventListener("scroll", updatePosition);
     }, []);
+
     return scrollPosition;
   };
 
@@ -117,7 +119,12 @@ const Features: React.FC = () => {
   const scrollY = useScrollPosition();
 
   // Define a threshold for when the elements should fade out
-  const threshold = window.innerHeight / 1.5;
+  // The threshold should be set inside a useEffect to ensure 'window' is defined
+  const [threshold, setThreshold] = useState(0);
+
+  useEffect(() => {
+    setThreshold(window.innerHeight / 1.5);
+  }, []);
 
   return (
     <div className="bg-white">

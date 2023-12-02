@@ -28,10 +28,13 @@ const Hero: React.FC = () => {
   // Calculate the width needed for the largest word
   const maxWidth = Math.max(...wordList.map((word) => word.length)) * 15; // 15 is an approximate width per character
 
-  const handleScroll = () => setOffset(window.pageYOffset);
-
   useEffect(() => {
+    const handleScroll = () => {
+      setOffset(window.scrollY);
+    };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initialize offset on mount
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
