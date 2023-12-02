@@ -49,7 +49,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto lg:w-1/2">
+    <div className="container mx-auto lg:w-3/5">
       <motion.div
         className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg px-8 pt-8 mx-4"
         variants={pinkBoxVariants}
