@@ -10,7 +10,7 @@ import "./styles.css";
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen w-full bg-primary-blue">
+    <div className="flex flex-col min-h-screen w-full bg-primary-blue overflow-x-hidden">
       <Navbar />
       <Hero />
       <Carousel />
