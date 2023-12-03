@@ -1,6 +1,6 @@
-// pages/TermsOfService.tsx
+// pages/terms-of-service.tsx
 import React from "react";
-import TermsOfService from "../components/TermsOfService";
+import TermsOfService from "@/components/TermsOfService";
 
 const TermsOfServicePage = () => {
   return <TermsOfService />;
