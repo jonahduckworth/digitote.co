@@ -2,7 +2,7 @@ import React from "react";
 
 const Pricing: React.FC = () => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-8 mx-auto my-10 font-avenir-heavy">
+    <div className="bg-white shadow-md rounded-lg p-4 sm:p-8 mx-2 sm:mx-0 my-4 sm:my-10 font-avenir-heavy">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">
         Tier 1: <span className="text-gray-600">$144 CAD Monthly</span> /{" "}
         <span className="text-gray-600">$129 CAD Annually</span>
