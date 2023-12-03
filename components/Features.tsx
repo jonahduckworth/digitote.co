@@ -148,7 +148,7 @@ const Features: React.FC = () => {
                 {feature.title}
               </h3>
               <hr className="border-primary-pink mb-2"></hr>
-              <p className="text-black">{feature.description}</p>
+              <p className="text-black font-sans">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>
