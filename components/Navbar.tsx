@@ -102,7 +102,10 @@ const Navbar: React.FC = () => {
         {isNavOpen && (
           <div className="flex justify-end">
             <button
-              onClick={openModal}
+              onClick={() => {
+                openModal();
+                toggleNav();
+              }}
               className="bg-primary-cyan w-32 hover:bg-primary-cyan-75 text-white px-4 py-2 rounded-full text-sm font-medium z-20 font-avenir-heavy"
             >
               Book a Demo!
