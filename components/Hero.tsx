@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
         </h1>
       </div>
       <div
-        className="flex-1 flex-col bg-primary-pink flex items-center justify-center px-4 md:px-44 text-start"
+        className="flex-1 flex-col bg-primary-pink flex items-center justify-center px-4 md:px-44 my-4 md:my-0 text-start"
         style={{ transform: `translateY(-${offset * 0.3}px)` }}
       >
         <p className="text-lg md:text-xl text-white mb-4 md:mb-8 font-avenir">
