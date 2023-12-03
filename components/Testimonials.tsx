@@ -48,10 +48,8 @@ const Testimonials: React.FC = () => {
     onscreen: { opacity: 1, x: 0, transition: { duration: 1 } },
   };
 
-  const responsiveContainerClass = "mx-2 md:mx-6 lg:mx-auto";
-
   return (
-    <div className={`container ml-8 lg:w-3/5 ${responsiveContainerClass}`}>
+    <div className={`container px-4 md:px-0 md:w-1/2 lg:w-3/5 mx-auto`}>
       <motion.div
         className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg px-4 lg:px-8 pt-8"
         variants={pinkBoxVariants}
