@@ -1,5 +1,5 @@
 import React from "react";
-import termsOfService from "../public/TermsOfService";
+import termsOfService from "../public/policies/TermsOfService";
 import "../app/globals.css";
 
 const TermsOfService = () => {
