@@ -5,6 +5,7 @@ const privacyPolicy = {
     "We operate and provide the products, services, information, content, and Intellectual Property (as defined herein) at our website at www.digitote.co and the Digitote mobile and desktop application (together, the “Website/Platform”).",
     "This Privacy Policy interacts with, and is subject to, and, where reasonably applicable, User is subject to and bound by, the following documents:",
     "- Our Terms of Service can be found at <b><a href='http://digitote.co/terms-of-service' target='_blank' rel='noopener noreferrer'>digitote.co/terms-of-service</a></b>.",
+    // "- Our Agency License agreement found at <Agency License Agreement URL>. ",
     "(The URLs or hyperlinks provided herein are for convenience only and are subject to change from time to time and a broken, incorrect, or missing hyperlink shall not affect the interpretation or enforcement of this Privacy Policy).",
     "<u>This Privacy Policy describes:</u>",
     "- The types of information we may collect from you or that you may provide when you visit the Website/Platform or connect with us through other means.",

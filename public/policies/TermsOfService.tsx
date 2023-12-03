@@ -4,8 +4,8 @@ const termsOfService = {
     "Digitote Creative Management Services Inc. (\u201cCompany\u201d, \u201cWe\u201d, \u201cus\u201d, \u201cDigitote\u201d) is a start-up from Calgary, Alberta that provides software, products, and other services in the influencer and creative management sector, including the Website/Platform (as defined below, and together, the \u201cServices\u201d). ",
     "We operate and provide the products, services, information, content, and Intellectual Property (as defined herein) at our website at www.digitote.co and the Digitote mobile and desktop application (together, the \u201cWebsite/Platform\u201d). ",
     "This Terms of Service interacts with, and is subject to, and, where reasonably applicable, User is subject to and bound by, the following documents:",
-    "- Our Privacy Policy found at <Privacy Policy URL>.",
-    "- Our Agency License agreement found at <Agency License Agreement URL>. ",
+    "- Our Privacy Policy found at <b><a href='http://digitote.co/privacy-policy' target='_blank' rel='noopener noreferrer'>digitote.co/privacy-policy</a></b>.",
+    // "- Our Agency License agreement found at <Agency License Agreement URL>. ",
   ],
   "ACCEPTANCE OF THE WEBSITE/PLATFORM TERMS AND CONDITIONS OF USE\u00a0": [
     "THROUGH CONTINUED USE OR VIEWERSHIP OF THE WEBSITE/PLATFORM AND THE USE OR CONSUMPTION OF DIGITOTE\u2019S PRODUCTS OR SERVICES, YOU AGREE TO BE BOUND BY THIS TERMS OF SERVICE, AND EACH OF THE DOCUMENTS LISTED ABOVE IN THE INTRODUCTION, AND THE OBLIGATIONS AND REQUIREMENTS SET FORTH THEREIN.",
