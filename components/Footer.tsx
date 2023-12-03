@@ -1,31 +1,32 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
     <footer className="w-full mt-auto p-6 bg-primary-blue text-white text-center shadow-inner">
       <div className="flex justify-center space-x-6 mb-4">
-        <a
-          href="https://www.linkedin.com"
+        <Link
+          href="https://www.linkedin.com/company/digitote-inc/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-primary-pink"
         >
           LinkedIn
-        </a>
-        <a
-          href="https://www.instagram.com"
+        </Link>
+        <Link
+          href="https://www.instagram.com/digitote/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-primary-pink"
         >
           Instagram
-        </a>
-        <a href="/privacy-policy" className="hover:text-primary-pink">
+        </Link>
+        <Link href="/privacy-policy" className="hover:text-primary-pink">
           Privacy Policy
-        </a>
-        <a href="/terms-of-service" className="hover:text-primary-pink">
+        </Link>
+        <Link href="/terms-of-service" className="hover:text-primary-pink">
           Terms of Service
-        </a>
+        </Link>
       </div>
       <p>&copy; {new Date().getFullYear()} Digitote. All rights reserved.</p>
     </footer>

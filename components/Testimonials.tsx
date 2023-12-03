@@ -79,7 +79,9 @@ const Testimonials: React.FC = () => {
               <p className="text-md font-semibold text-primary-blue">
                 {testimonials[current].author}
               </p>
-              <p className="text-sm">{testimonials[current].handle}</p>
+              <p className="text-sm font-sans">
+                {testimonials[current].handle}
+              </p>
             </motion.div>
           </AnimatePresence>
           <div className="flex justify-end mt-4">
