@@ -48,7 +48,7 @@ const Testimonials: React.FC = () => {
     onscreen: { opacity: 1, x: 0, transition: { duration: 1 } },
   };
 
-  const responsiveContainerClass = "mx-2 sm:mx-4 md:mx-6 lg:mx-auto";
+  const responsiveContainerClass = "mx-2 md:mx-6 lg:mx-auto";
 
   return (
     <div className={`container mx-auto lg:w-3/5 ${responsiveContainerClass}`}>
