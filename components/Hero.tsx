@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
         className="flex-1 bg-primary-blue flex items-center justify-center"
         style={{ transform: `translateY(${offset * 0.3}px)` }}
       >
-        <h1 className="text-5xl font-black text-white px-4 text-center">
+        <h1 className="text-3xl md:text-5xl font-black text-white px-4 text-center">
           <div className="flex flex-wrap justify-center font-avenir-heavy items-baseline">
             <p className="mr-2">
               Where <span className="text-primary-cyan">Talent Management</span>{" "}
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
         className="flex-1 flex-col bg-primary-pink flex items-center justify-center px-4 md:px-44 text-start"
         style={{ transform: `translateY(-${offset * 0.3}px)` }}
       >
-        <p className="text-xl md:text-lg text-white mb-4 md:mb-8 font-avenir">
+        <p className="text-lg md:text-xl text-white mb-4 md:mb-8 font-avenir">
           Welcome to your Digital Tote bag. A catch all for campaign data,
           communication, calendars, payments, and so much more. Born from real
           life challenges as a talent manager and a relentless pursuit of
@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
           we created a platform that supports and systematizes life between
           talent and manager. We go as far as to say, it is life changing.
         </p>
-        <p className="text-xl md:text-lg text-white">
+        <p className="text-lg md:text-xl text-white">
           Next time your talent is looking for campaign details, tell them,
           <span className="text-primary-blue font-avenir-heavy">
             {" "}
