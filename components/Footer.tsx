@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="w-full mt-auto p-6 bg-primary-blue text-white text-center shadow-inner">
       <div className="flex justify-center space-x-6 mb-4">
         <Link
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/company/digitote-inc/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-primary-pink"
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           LinkedIn
         </Link>
         <Link
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/digitote/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-primary-pink"
