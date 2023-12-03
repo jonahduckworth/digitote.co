@@ -48,17 +48,19 @@ const Testimonials: React.FC = () => {
     onscreen: { opacity: 1, x: 0, transition: { duration: 1 } },
   };
 
+  const responsiveContainerClass = "mx-2 sm:mx-4 md:mx-6 lg:mx-auto";
+
   return (
-    <div className="container mx-auto lg:w-3/5">
+    <div className={`container mx-auto lg:w-3/5 ${responsiveContainerClass}`}>
       <motion.div
-        className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg px-8 pt-8 mx-4"
+        className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg lg:px-8 pt-8"
         variants={pinkBoxVariants}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: false }}
       >
         <motion.div
-          className="flex flex-col flex-grow bg-white p-4 rounded-md"
+          className="flex flex-col bg-white p-4 rounded-md mx-4"
           variants={testimonialVariants}
           initial="offscreen"
           whileInView="onscreen"
@@ -94,9 +96,15 @@ const Testimonials: React.FC = () => {
             </button>
           </div>
         </motion.div>
-        <div className="w-full ml-4">
+        <motion.div
+          className="mx-auto"
+          variants={testimonialVariants}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: false }}
+        >
           <Pricing />
-        </div>
+        </motion.div>
       </motion.div>
       {isModalOpen && <BookDemoModal onClose={closeModal} />}
     </div>
