@@ -51,7 +51,7 @@ const Testimonials: React.FC = () => {
   const responsiveContainerClass = "mx-2 md:mx-6 lg:mx-auto";
 
   return (
-    <div className={`container mx-8 lg:w-3/5 ${responsiveContainerClass}`}>
+    <div className={`container ml-8 lg:w-3/5 ${responsiveContainerClass}`}>
       <motion.div
         className="flex flex-col lg:flex-row items-center bg-primary-pink rounded-lg px-4 lg:px-8 pt-8"
         variants={pinkBoxVariants}
