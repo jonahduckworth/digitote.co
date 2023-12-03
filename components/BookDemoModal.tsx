@@ -21,12 +21,13 @@ const BookDemoModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-start pt-8 pb-16" // Add top padding and bottom padding
       onClick={handleBackgroundClick}
     >
       <div
-        className="bg-white p-4 sm:p-8 md:p-12 rounded-lg shadow-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 overflow-y-auto"
+        className="bg-white p-4 sm:p-8 md:p-12 rounded-lg shadow-lg w-full sm:w-3/4 md:w-1/2 lg:w-1/3 mx-4 my-4 overflow-y-auto max-h-full" // Add horizontal margin and max height
         onClick={handleModalContentClick}
+        style={{ maxHeight: "calc(100% - 2rem)" }} // Ensure the modal is not taller than the screen minus the vertical margin
       >
         <h2 className="text-2xl mb-3 text-primary-pink font-avenir-heavy">
           Book a Demo

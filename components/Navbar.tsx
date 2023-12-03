@@ -113,7 +113,14 @@ const Navbar: React.FC = () => {
           </div>
         )}
       </div>
-      {isModalOpen && <BookDemoModal onClose={closeModal} />}
+      {isModalOpen && (
+        <BookDemoModal
+          onClose={() => {
+            closeModal();
+            toggleNav();
+          }}
+        />
+      )}
     </nav>
   );
 };
