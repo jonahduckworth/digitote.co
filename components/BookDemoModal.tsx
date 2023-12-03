@@ -1,8 +1,21 @@
 // BookDemoModal.tsx
-import React, { useState } from "react";
+
+"use client";
+
+import React, { useState, useEffect } from "react";
 
 const BookDemoModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [userType, setUserType] = useState("");
+
+  useEffect(() => {
+    // When the modal is mounted, disable scrolling on the body
+    document.body.style.overflow = "hidden";
+
+    // When the modal is unmounted, re-enable scrolling on the body
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   const handleUserTypeChange = (
     event: React.ChangeEvent<HTMLSelectElement>
