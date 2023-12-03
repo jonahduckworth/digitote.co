@@ -24,7 +24,9 @@ const Footer: React.FC = () => {
         <Link href="/privacy-policy" className="hover:text-primary-pink">
           Privacy Policy
         </Link>
-        <Link href="/terms-of-service">Terms of Service</Link>
+        <Link href="/terms-of-service" className="hover:text-primary-pink">
+          Terms of Service
+        </Link>
       </div>
       <p>&copy; {new Date().getFullYear()} Digitote. All rights reserved.</p>
     </footer>
